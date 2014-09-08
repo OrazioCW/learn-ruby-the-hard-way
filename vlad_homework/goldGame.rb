@@ -5,7 +5,7 @@ def gold_room
 	
 	# fixed if
 	#if choice.include?("0") || choice.include?("1")
-	if input_string.to_i.to_s == input_string
+	if choice.to_i.to_s == choice
 		how_much = choice.to_i
 	else
 		dead("Man, learn to type a number.")
