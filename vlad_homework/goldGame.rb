@@ -1,3 +1,7 @@
+def is_number?(str)
+    true if Integer(str) rescue false
+end
+
 def gold_room
 	puts "This room is full of gold. How much do you take?"
 	print "> "
@@ -5,7 +9,7 @@ def gold_room
 	
 	# fixed if
 	#if choice.include?("0") || choice.include?("1")
-	if choice.to_i.to_s == choice
+	if is_number?(choice)
 		how_much = choice.to_i
 	else
 		dead("Man, learn to type a number.")
