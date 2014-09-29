@@ -1,5 +1,5 @@
 module Dead
-	def dead(why)
+	def self.dead(why)
 	  puts why, "Good job!"
 	  exit(0)
 	end

@@ -1,15 +1,3 @@
-class Text_class
-
-	text = []
-	text.push("You enter a dark Tomb full of traps.")
-	text.push("In front of you is tree steps corridor leading to a door.")
-	text.push("Which way you take those steps?")
-	
-	
-	def dialog(i) 
-		puts text[i]
-	end
-end
 
 def gold_room
 	puts "This room is full of gold. How much do you take?"
@@ -17,7 +5,6 @@ def gold_room
 	choice = $stdin.gets.chomp
 	
 	# fixed if
-	#if choice.include?("0") || choice.include?("1")
 	if choice =~ /\A[-+]?[0-9]+\z/ && choice > 0
 		how_much = choice.to_i
 	else
@@ -33,10 +20,11 @@ def gold_room
 end
 
 def mummy_room
-  puts "There is a mummy here."
-  puts "The mummy has sward."
-  puts "This mummy guard another door."
-  puts "How are you going to enter that door?"
+
+  Text.dialog(4)
+  Text.dialog(5)
+  Text.dialog(6)
+  Text.dialog(7)
   
   while true
     print "> "
@@ -81,10 +69,9 @@ def dead(why)
 end
 
 def start
-   t = Text_class.new()
-  t.dialog(1)
-  t.dialog(2)
-  t.dialog(3)
+  Text.dialog(1)
+  Text.dialog(2)
+  Text.dialog(3)
   step_Left = false
   step_Right = false
   
