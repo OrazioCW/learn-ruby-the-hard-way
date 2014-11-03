@@ -25,7 +25,7 @@ module Room1
 			step_Right = true
 		elsif choice == "step forward" && step_Right && step_Left
 		  puts "Good job! You open the door and enter"
-		  Room2.mummy_room
+		  Room2.door_room
 		elsif choice == "step left" && step_Right && !step_Left
 		  puts "Good job! You are still alive."
 		  step_Left = true
